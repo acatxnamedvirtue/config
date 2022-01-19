@@ -18,6 +18,8 @@ with pkgs; [
   nerdfonts
   slack
   spotify
+  vscode
   wally-cli
+  xclip
   zsh-powerlevel10k
 ]
