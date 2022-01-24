@@ -6,7 +6,12 @@ let
 in
 {
   dconf.settings = {
+    "org/gnome/control-center" = {
+      last-panel = "background";
+    };
+
     "org/gnome/desktop/interface" = {
+      clock-show-weekday = true;
       cursor-theme = "Pop";
       font-antialiasing = "grayscale";
       font-hinting = "slight";
@@ -22,6 +27,10 @@ in
 
     "org/gnome/desktop/sound" = {
       theme-name = "Pop";
+    };
+
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "appmenu:minimize,maximize,close";
     };
 
     "org/gnome/nautilus/preferences" = {
@@ -55,6 +64,10 @@ in
       status-icon-padding = -1;
       tray-padding = -1;
       window-preview-title-position = "TOP";
+    };
+
+    "org/gnome/shell/extensions/user-theme" = {
+      name = "Pop";
     };
 
     "org/gnome/shell/world-clocks" = {
