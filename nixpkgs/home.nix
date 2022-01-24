@@ -2,7 +2,6 @@
 with import <nixpkgs> { config = { allowUnfree = true;};};
 
 let
-  mkTuple = lib.hm.gvariant.mkTuple;
   universalPackages = import ./programs/packages.nix {
     pkgs = pkgs;
     pkgsUnstable = pkgsUnstable;

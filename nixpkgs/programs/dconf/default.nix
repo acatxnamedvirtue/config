@@ -7,7 +7,7 @@ in
 {
   dconf.settings = {
     "org/gnome/control-center" = {
-      last-panel = "background";
+      last-panel = "default-apps";
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -18,11 +18,14 @@ in
     "org/gnome/desktop/interface" = {
       clock-show-weekday = true;
       cursor-theme = "Pop";
+      document-font-name = "Roboto Slab 11";
       font-antialiasing = "grayscale";
       font-hinting = "slight";
+      font-name = "Fira Sans Semi-Light 10";
       gtk-im-module = "gtk-im-context-simple";
       gtk-theme = "Pop-dark";
       icon-theme = "Pop";
+      monospace-font-name = "Fira Mono 11";
       toolkit-accessibility = false;
     };
 
@@ -48,11 +51,26 @@ in
 
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,maximize,close";
+      titlebar-font = "Fira Sans Semi-Bold 10";
+    };
+
+    "org/gnome/epiphany" = {
+      ask-for-default = false;
+    };
+
+    "org/gnome/epiphany/state" = {
+      is-maximized = true;
+      window-position = mkTuple [ 0 0 ];
+      window-size = mkTuple [ 434 738 ];
     };
 
     "org/gnome/evolution-data-server" = {
       migrated = true;
       network-monitor-gio-name = "";
+    };
+
+    "org/gnome/mutter" = {
+      edge-tiling = true;
     };
 
     "org/gnome/nautilus/preferences" = {
@@ -74,7 +92,7 @@ in
 
     "org/gnome/shell/extensions/dash-to-panel" = {
       animate-appicon-hover = false;
-      animate-appicon-hover-animation-extent = ''{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}'';
+      animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
       appicon-margin = 8;
       appicon-padding = 4;
       available-monitors = [ 0 1 ];
