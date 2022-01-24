@@ -7,7 +7,7 @@ in
 {
   dconf.settings = {
     "org/gnome/control-center" = {
-      last-panel = "default-apps";
+      last-panel = "background";
     };
 
     "org/gnome/desktop/background" = {
@@ -103,11 +103,15 @@ in
       maximized = false;
     };
 
+    "org/gnome/settings-daemon/plugins/power" = {
+      sleep-inactive-ac-type = "nothing";
+    };
+
     "org/gnome/shell" = {
       command-history = [ "r" ];
       disable-user-extensions = false;
       disabled-extensions = [ "lockkeys@vaina.lt" ];
-      enabled-extensions = [ "dash-to-panel@jderose9.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "arcmenu@arcmenu.com" "sound-output-device-chooser@kgshank.net" ];
+      enabled-extensions = [ "dash-to-panel@jderose9.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "arcmenu@arcmenu.com" "sound-output-device-chooser@kgshank.net" "no-overview@fthx" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "discord.desktop" "webstorm.desktop" "Alacritty.desktop" ];
       welcome-dialog-last-shown-version = "41.1";
     };
