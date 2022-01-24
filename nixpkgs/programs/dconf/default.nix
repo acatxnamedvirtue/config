@@ -10,6 +10,11 @@ in
       last-panel = "background";
     };
 
+    "org/gnome/desktop/input-sources" = {
+      sources = [ (mkTuple [ "xkb" "us" ]) ];
+      xkb-options = [ "terminate:ctrl_alt_bksp" ];
+    };
+
     "org/gnome/desktop/interface" = {
       clock-show-weekday = true;
       cursor-theme = "Pop";
@@ -19,6 +24,18 @@ in
       gtk-theme = "Pop-dark";
       icon-theme = "Pop";
       toolkit-accessibility = false;
+    };
+
+    "org/gnome/desktop/notifications" = {
+      application-children = [ "discord" "gnome-power-panel" ];
+    };
+
+    "org/gnome/desktop/notifications/application/discord" = {
+      application-id = "discord.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/gnome-power-panel" = {
+      application-id = "gnome-power-panel.desktop";
     };
 
     "org/gnome/desktop/privacy" = {
@@ -31,6 +48,11 @@ in
 
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,maximize,close";
+    };
+
+    "org/gnome/evolution-data-server" = {
+      migrated = true;
+      network-monitor-gio-name = "";
     };
 
     "org/gnome/nautilus/preferences" = {
