@@ -4,6 +4,7 @@ with pkgs; [
   albert
   autorandr
   bzip2
+  dconf2nix
   discord
   exa
   fasd
@@ -11,11 +12,15 @@ with pkgs; [
   font-awesome
   fontpreview
   ghc
+  gnome.gnome-tweaks
+  gnomeExtensions.dash-to-panel
   htop
   jetbrains.webstorm
   mesa-demos
   mplayer
   nerdfonts
+  pop-icon-theme
+  pop-gtk-theme
   slack
   spotify
   vscode

@@ -7,9 +7,14 @@ let
     pkgs = pkgs;
     pkgsUnstable = pkgsUnstable;
   };
+
+  aseprite-unfree = pkgs.aseprite-unfree.overrideAttrs (old: {
+   version = "1.2.32";
+   });
   
   packages = universalPackages
   ++ [
+  aseprite-unfree
   ];
 in
 
@@ -17,6 +22,7 @@ in
   imports = [
     ./programs/home-manager/default.nix
     ./programs/git/default.nix
+    ./programs/gtk/default.nix
     ./programs/vim/default.nix
     ./programs/zsh/default.nix
   ];
