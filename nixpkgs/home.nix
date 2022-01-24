@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 with import <nixpkgs> { config = { allowUnfree = true;};};
 
 let
-
+  mkTuple = lib.hm.gvariant.mkTuple;
   universalPackages = import ./programs/packages.nix {
     pkgs = pkgs;
     pkgsUnstable = pkgsUnstable;
@@ -21,6 +21,7 @@ in
 {
   imports = [
     ./programs/home-manager/default.nix
+    ./programs/dconf/default.nix
     ./programs/git/default.nix
     ./programs/gtk/default.nix
     ./programs/vim/default.nix

@@ -1,0 +1,1 @@
+Regenerate this with `dconf dump / | dconf2nix > default.nix`
