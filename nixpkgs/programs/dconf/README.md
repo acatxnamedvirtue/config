@@ -1,2 +1,1 @@
-Regenerate this with `dconf dump / | dconf2nix | sed s/\"\'\{/\'\'\{/ | sed s/\}\'\"/\}\'\'/ > default.nix
-`
+Regenerate this with `dconf dump / | dconf2nix | sed s/\"\'\{/\'\'\{/ | sed s/\}\'\"/\}\'\'/ | sed s/\"\"\{/\'\'\{/ | sed s/\}\"\"/\}\'\'/ > default.nix`
