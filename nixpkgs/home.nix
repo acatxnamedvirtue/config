@@ -2,6 +2,8 @@
 with import <nixpkgs> { config = { allowUnfree = true;};};
 
 let
+  pkgsUnstable = import <unstable> {};
+
   universalPackages = import ./programs/packages.nix {
     pkgs = pkgs;
     pkgsUnstable = pkgsUnstable;

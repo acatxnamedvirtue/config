@@ -1,7 +1,6 @@
 {pkgs, pkgsUnstable}:
 
 with pkgs; [
-  albert
   autorandr
   bzip2
   dconf2nix
@@ -13,7 +12,9 @@ with pkgs; [
   fontpreview
   ghc
   gnome.gnome-tweaks
+  gnome-menus
   gnomeExtensions.dash-to-panel
+  pkgsUnstable.gnomeExtensions.arcmenu
   htop
   jetbrains.webstorm
   mesa-demos
