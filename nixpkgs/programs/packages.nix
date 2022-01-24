@@ -13,8 +13,10 @@ with pkgs; [
   ghc
   gnome.gnome-tweaks
   gnome-menus
-  gnomeExtensions.dash-to-panel
   pkgsUnstable.gnomeExtensions.arcmenu
+  gnomeExtensions.dash-to-panel
+  gnomeExtensions.no-overview
+  gnomeExtensions.sound-output-device-chooser
   htop
   jetbrains.webstorm
   mesa-demos
