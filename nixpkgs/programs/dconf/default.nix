@@ -145,7 +145,7 @@ in
       pinned-app-list = [ "Google Chrome" "" "google-chrome.desktop" "Files" "" "org.gnome.Nautilus.desktop" "Terminal" "" "org.gnome.Terminal.desktop" "ArcMenu Settings" "ArcMenu_ArcMenuIcon" "gnome-extensions prefs arcmenu@arcmenu.com" ];
       prefs-visible-page = 0;
       quicklinks-item-icon-size = "Default";
-      recently-installed-apps = [ "org.gnome.Nautilus.desktop" ];
+      recently-installed-apps = [];
       right-panel-width = 205;
       show-activities-button = false;
       vert-separator = false;
@@ -156,7 +156,7 @@ in
       animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
       appicon-margin = 4;
       appicon-padding = 4;
-      available-monitors = [ 0 1 ];
+      available-monitors = [ 0 1 2 ];
       dot-style-focused = "METRO";
       dot-style-unfocused = "DOTS";
       hotkeys-overlay-combo = "TEMPORARILY";
@@ -165,11 +165,11 @@ in
       intellihide-hide-from-windows = true;
       intellihide-show-in-fullscreen = true;
       leftbox-padding = -1;
-      panel-anchors = ''{"0":"MIDDLE","1":"MIDDLE"}'';
-      panel-element-positions = ''{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"1":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'';
+      panel-anchors = ''{"0":"MIDDLE","1":"MIDDLE","2":"MIDDLE"}'';
+      panel-element-positions = ''{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"1":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}],"2":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'';
       panel-element-positions-monitors-sync = true;
-      panel-lengths = ''{"0":100,"1":100}'';
-      panel-sizes = ''{"0":40,"1":40}'';
+      panel-lengths = ''{"0":100,"1":100,"2":100}'';
+      panel-sizes = ''{"0":40,"1":40,"2":40}'';
       status-icon-padding = -1;
       stockgs-keep-dash = false;
       stockgs-keep-top-panel = false;
@@ -227,10 +227,10 @@ in
       show-type-column = true;
       sidebar-width = 151;
       sort-column = "name";
-      sort-directories-first = false;
+      sort-directories-first = true;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 136 70 ];
+      window-position = mkTuple [ 412 57 ];
       window-size = mkTuple [ 1096 822 ];
     };
 
