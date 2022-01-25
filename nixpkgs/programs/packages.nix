@@ -12,6 +12,7 @@ with pkgs; [
   fontpreview
   ghc
   gnome.gnome-tweaks
+  gnome.nautilus
   gnome-menus
   pkgsUnstable.gnomeExtensions.arcmenu
   gnomeExtensions.dash-to-panel

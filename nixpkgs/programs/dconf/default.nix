@@ -117,6 +117,7 @@ in
     };
 
     "org/gnome/shell/extensions/arcmenu" = {
+      application-shortcuts-list = "[['Settings', 'preferences-system-symbolic', 'gnome-control-center.desktop'], ['Tweaks', 'org.gnome.tweaks-symbolic', 'org.gnome.tweaks.desktop'], ['Activities Overview', 'view-fullscreen-symbolic', 'ArcMenu_ActivitiesOverview']]";
       apps-show-extra-details = false;
       arc-menu-icon = 44;
       arc-menu-placement = "DTP";
@@ -144,6 +145,7 @@ in
       pinned-app-list = [ "Google Chrome" "" "google-chrome.desktop" "Files" "" "org.gnome.Nautilus.desktop" "Terminal" "" "org.gnome.Terminal.desktop" "ArcMenu Settings" "ArcMenu_ArcMenuIcon" "gnome-extensions prefs arcmenu@arcmenu.com" ];
       prefs-visible-page = 0;
       quicklinks-item-icon-size = "Default";
+      recently-installed-apps = [ "org.gnome.Nautilus.desktop" ];
       right-panel-width = 205;
       show-activities-button = false;
       vert-separator = false;
