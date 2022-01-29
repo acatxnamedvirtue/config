@@ -20,6 +20,7 @@ with pkgs; [
   gnomeExtensions.sound-output-device-chooser
   htop
   jetbrains.webstorm
+  krita
   mesa-demos
   mplayer
   nerdfonts

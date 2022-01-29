@@ -18,6 +18,7 @@ in
     };
 
     "org/gnome/desktop/input-sources" = {
+      per-window = false;
       sources = [ (mkTuple [ "xkb" "us" ]) ];
       xkb-options = [ "terminate:ctrl_alt_bksp" ];
     };
@@ -49,8 +50,16 @@ in
       application-id = "gnome-power-panel.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/org-gnome-nautilus" = {
+      application-id = "org.gnome.Nautilus.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/org-gnome-shell-extensions" = {
       application-id = "org.gnome.Shell.Extensions.desktop";
+    };
+
+    "org/gnome/desktop/peripherals/touchpad" = {
+      two-finger-scrolling-enabled = true;
     };
 
     "org/gnome/desktop/privacy" = {
@@ -93,6 +102,10 @@ in
       overlay-key = "Super_L";
     };
 
+    "org/gnome/nautilus/compression" = {
+      default-compression-format = "zip";
+    };
+
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       search-filter-time-type = "last_modified";
@@ -112,7 +125,7 @@ in
       disable-user-extensions = false;
       disabled-extensions = [ "lockkeys@vaina.lt" ];
       enabled-extensions = [ "dash-to-panel@jderose9.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "arcmenu@arcmenu.com" "sound-output-device-chooser@kgshank.net" "no-overview@fthx" ];
-      favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "discord.desktop" "webstorm.desktop" "Alacritty.desktop" ];
+      favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "discord.desktop" "webstorm.desktop" "Alacritty.desktop" "aseprite.desktop" "org.kde.krita.desktop" ];
       welcome-dialog-last-shown-version = "41.1";
     };
 
@@ -156,7 +169,7 @@ in
       animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
       appicon-margin = 4;
       appicon-padding = 4;
-      available-monitors = [ 0 1 2 ];
+      available-monitors = [ 0 1 ];
       dot-style-focused = "METRO";
       dot-style-unfocused = "DOTS";
       hotkeys-overlay-combo = "TEMPORARILY";
