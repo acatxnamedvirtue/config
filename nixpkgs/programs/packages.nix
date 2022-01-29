@@ -28,6 +28,7 @@ with pkgs; [
   pop-gtk-theme
   slack
   spotify
+  steam
   vscode
   wally-cli
   xclip
