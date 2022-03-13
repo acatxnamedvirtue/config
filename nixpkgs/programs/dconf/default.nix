@@ -6,6 +6,18 @@ let
 in
 {
   dconf.settings = {
+    "org/blueman/general" = {
+      window-properties = [ 560 350 2079 383 ];
+    };
+
+    "org/blueman/plugins/powermanager" = {
+      auto-power-on = "@mb true";
+    };
+
+    "org/blueman/plugins/recentconns" = {
+      recent-connections = "[{'adapter': '64:6E:E0:77:70:A3', 'address': '44:16:22:B3:C2:E1', 'alias': 'Xbox Wireless Controller', 'icon': 'input-gaming', 'name': 'Audio and input profiles', 'uuid': '00000000-0000-0000-0000-000000000000', 'time': '1643426873.062652'}]";
+    };
+
     "org/gnome/control-center" = {
       last-panel = "background";
     };
@@ -15,6 +27,10 @@ in
       picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/Loveles.jpg";
       primary-color = "#ffffff";
       secondary-color = "#000000";
+    };
+
+    "org/gnome/desktop/datetime" = {
+      automatic-timezone = true;
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -39,7 +55,7 @@ in
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "discord" "gnome-power-panel" ];
+      application-children = [ "discord" "gnome-power-panel" "vivaldi-stable" ];
     };
 
     "org/gnome/desktop/notifications/application/discord" = {
@@ -56,6 +72,22 @@ in
 
     "org/gnome/desktop/notifications/application/org-gnome-shell-extensions" = {
       application-id = "org.gnome.Shell.Extensions.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/spotify" = {
+      application-id = "spotify.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/virt-manager" = {
+      application-id = "virt-manager.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/vivaldi-stable" = {
+      application-id = "vivaldi-stable.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/webstorm" = {
+      application-id = "webstorm.desktop";
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
@@ -116,6 +148,15 @@ in
       maximized = false;
     };
 
+    "org/gnome/nm-applet/eap/7302c5bb-392b-3476-bcad-a6c89f009020" = {
+      ignore-ca-cert = false;
+      ignore-phase2-ca-cert = false;
+    };
+
+    "org/gnome/settings-daemon/plugins/color" = {
+      night-light-last-coordinates = mkTuple [ 40.655199280057595 -73.9559 ];
+    };
+
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "nothing";
     };
@@ -126,6 +167,7 @@ in
       disabled-extensions = [ "lockkeys@vaina.lt" ];
       enabled-extensions = [ "dash-to-panel@jderose9.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "arcmenu@arcmenu.com" "sound-output-device-chooser@kgshank.net" "no-overview@fthx" ];
       favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "discord.desktop" "webstorm.desktop" "Alacritty.desktop" "aseprite.desktop" "org.kde.krita.desktop" ];
+      had-bluetooth-devices-setup = false;
       welcome-dialog-last-shown-version = "41.1";
     };
 
@@ -209,6 +251,10 @@ in
       locations = "@av []";
     };
 
+    "org/gnome/system/location" = {
+      enabled = true;
+    };
+
     "org/gnome/tweaks" = {
       show-extensions-notice = false;
     };
@@ -243,8 +289,80 @@ in
       sort-directories-first = true;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 412 57 ];
+      window-position = mkTuple [ 276 124 ];
       window-size = mkTuple [ 1096 822 ];
+    };
+
+    "org/virt-manager/virt-manager" = {
+      manager-window-height = 550;
+      manager-window-width = 550;
+      xmleditor-enabled = true;
+    };
+
+    "org/virt-manager/virt-manager/confirm" = {
+      forcepoweroff = false;
+      removedev = true;
+      unapplied-dev = true;
+    };
+
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
+    };
+
+    "org/virt-manager/virt-manager/conns/qemu:system" = {
+      window-size = mkTuple [ 800 600 ];
+    };
+
+    "org/virt-manager/virt-manager/details" = {
+      show-toolbar = true;
+    };
+
+    "org/virt-manager/virt-manager/new-vm" = {
+      graphics-type = "system";
+    };
+
+    "org/virt-manager/virt-manager/paths" = {
+      image-default = "/home/tylerbeebe";
+    };
+
+    "org/virt-manager/virt-manager/urls" = {
+      isos = [ "/home/tylerbeebe/Win11_English_x64v1.iso" ];
+    };
+
+    "org/virt-manager/virt-manager/vmlist-fields" = {
+      disk-usage = false;
+      network-traffic = false;
+    };
+
+    "org/virt-manager/virt-manager/vms/2893743db34b4e27bff69920e0904304" = {
+      autoconnect = 1;
+      scaling = 1;
+      vm-window-size = mkTuple [ 1024 810 ];
+    };
+
+    "org/virt-manager/virt-manager/vms/6e9f64937a904d4d8f7e03c24efea1b0" = {
+      autoconnect = 1;
+      scaling = 1;
+      vm-window-size = mkTuple [ 1024 810 ];
+    };
+
+    "org/virt-manager/virt-manager/vms/b08ffa1911124cf8b21809d1a2b79834" = {
+      autoconnect = 1;
+      scaling = 1;
+      vm-window-size = mkTuple [ 1024 835 ];
+    };
+
+    "org/virt-manager/virt-manager/vms/b75ed1d870d31180fff51e383841600e" = {
+      autoconnect = 1;
+      scaling = 2;
+      vm-window-size = mkTuple [ 1920 1003 ];
+    };
+
+    "org/virt-manager/virt-manager/vms/c865ca461e524cdebdc120e6d2c8debe" = {
+      autoconnect = 1;
+      scaling = 2;
+      vm-window-size = mkTuple [ 1920 1003 ];
     };
 
   };

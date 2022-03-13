@@ -29,6 +29,8 @@ with pkgs; [
   slack
   spotify
   steam
+  vivaldi
+  vivaldi-ffmpeg-codecs
   vscode
   wally-cli
   xclip
