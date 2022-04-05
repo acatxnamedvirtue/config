@@ -11,6 +11,7 @@ in
 
 with pkgs; [
   autorandr
+  blender
   bzip2
   dconf2nix
   discord
@@ -33,6 +34,7 @@ with pkgs; [
   mesa-demos
   mplayer
   nerdfonts
+  peek
   pop-icon-theme
   pop-gtk-theme
   slack

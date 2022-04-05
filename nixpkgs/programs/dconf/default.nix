@@ -5,6 +5,17 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "com/uploadedlobster/peek" = {
+      interface-open-file-manager = true;
+      interface-show-notification = false;
+      persist-window-geometry = mkTuple [ 663 165 ];
+      recording-downsample = 1;
+      recording-framerate = 30;
+      recording-gifski-enabled = false;
+      recording-gifski-quality = 60;
+      recording-start-delay = 2;
+    };
+
     "org/blueman/general" = {
       window-properties = [ 560 350 2079 383 ];
     };
@@ -18,7 +29,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "background";
+      last-panel = "display";
     };
 
     "org/gnome/desktop/background" = {
@@ -54,7 +65,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "discord" "gnome-power-panel" "vivaldi-stable" ];
+      application-children = [ "discord" "gnome-power-panel" "vivaldi-stable" "com-uploadedlobster-peek" "spotify" ];
+      show-banners = true;
+    };
+
+    "org/gnome/desktop/notifications/application/com-uploadedlobster-peek" = {
+      application-id = "com.uploadedlobster.peek.desktop";
     };
 
     "org/gnome/desktop/notifications/application/discord" = {
@@ -104,7 +120,12 @@ with lib.hm.gvariant;
       secondary-color = "#000000";
     };
 
+    "org/gnome/desktop/session" = {
+      idle-delay = mkUint32 900;
+    };
+
     "org/gnome/desktop/sound" = {
+      event-sounds = true;
       theme-name = "Pop";
     };
 
@@ -130,6 +151,7 @@ with lib.hm.gvariant;
 
     "org/gnome/mutter" = {
       edge-tiling = true;
+      experimental-features = [ "x11-randr-fractional-scaling" ];
       overlay-key = "Super_L";
     };
 
@@ -140,6 +162,7 @@ with lib.hm.gvariant;
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       search-filter-time-type = "last_modified";
+      search-view = "list-view";
     };
 
     "org/gnome/nautilus/window-state" = {
@@ -153,7 +176,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
-      night-light-last-coordinates = mkTuple [ 40.655199 (-73.9559) ];
+      night-light-last-coordinates = mkTuple [ 40.664996 (-73.96215) ];
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
@@ -165,7 +188,7 @@ with lib.hm.gvariant;
       disable-user-extensions = false;
       disabled-extensions = [ "lockkeys@vaina.lt" ];
       enabled-extensions = [ "dash-to-panel@jderose9.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "arcmenu@arcmenu.com" "sound-output-device-chooser@kgshank.net" "no-overview@fthx" ];
-      favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "discord.desktop" "webstorm.desktop" "Alacritty.desktop" "aseprite.desktop" "org.kde.krita.desktop" ];
+      favorite-apps = [ "org.gnome.Nautilus.desktop" "google-chrome.desktop" "discord.desktop" "webstorm.desktop" "Alacritty.desktop" "aseprite.desktop" "org.kde.krita.desktop" "spotify.desktop" "sc-controller.desktop" ];
       had-bluetooth-devices-setup = false;
       welcome-dialog-last-shown-version = "41.1";
     };
@@ -236,6 +259,7 @@ with lib.hm.gvariant;
       stockgs-keep-dash = false;
       stockgs-keep-top-panel = false;
       stockgs-panelbtn-click-only = false;
+      taskbar-locked = false;
       trans-bg-color = "#282828";
       trans-use-custom-bg = true;
       tray-padding = -1;
@@ -243,6 +267,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/sound-output-device-chooser" = {
+      cannot-activate-hidden-device = true;
       hide-menu-icons = true;
       hide-on-single-device = true;
       icon-theme = "monochrome";
@@ -298,7 +323,7 @@ with lib.hm.gvariant;
       sort-directories-first = true;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 364 102 ];
+      window-position = mkTuple [ 412 57 ];
       window-size = mkTuple [ 1096 822 ];
     };
 
