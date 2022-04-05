@@ -151,7 +151,7 @@ with lib.hm.gvariant;
 
     "org/gnome/mutter" = {
       edge-tiling = true;
-      experimental-features = [ "x11-randr-fractional-scaling" ];
+      experimental-features = [ "scale-monitor-framebuffer" ];
       overlay-key = "Super_L";
     };
 
@@ -176,7 +176,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
-      night-light-last-coordinates = mkTuple [ 40.664996 (-73.96215) ];
+      night-light-last-coordinates = mkTuple [ 40.637201 (-73.9559) ];
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
