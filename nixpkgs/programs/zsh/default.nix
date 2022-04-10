@@ -14,6 +14,10 @@ with import <nixpkgs> {config = { allowUnfree = true; }; };
             "export NIX_PATH=$HOME/.nix-defexpr/channels\${NIX_PATH:+:}$NIX_PATH"
 		];
 
+		sessionVariables = {
+		  EDITOR = "${pkgs.vim}/bin/vim";
+		};
+
 		history = {
       share = false;
 			ignoreSpace = true;
